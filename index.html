@@ -9,31 +9,28 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ff4d4d; /* Couleur de fond rouge */
-            color: white;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
-        body.fade-in {
-            opacity: 1;
+            background-color: #f4f4f4; /* Couleur de fond */
+            color: #333;
         }
         header {
-            background-color: #4CAF50;
+            background-color: #333;
             color: white;
             padding: 10px 0;
             text-align: center;
         }
         nav {
-            background-color: #333;
+            background-color: #f4f4f4;
             overflow: hidden;
+            border-bottom: 1px solid #ddd;
         }
         nav a {
             float: left;
             display: block;
-            color: white;
+            color: #333;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
+            font-weight: bold;
         }
         nav a:hover {
             background-color: #ddd;
@@ -41,19 +38,41 @@
         }
         main {
             padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
         }
         section {
             background-color: white;
-            margin-bottom: 20px;
+            margin: 10px;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            color: black;
+            flex: 1 1 calc(33.333% - 20px);
+            box-sizing: border-box;
+        }
+        .hero {
+            width: 100%;
+            background: url('https://via.placeholder.com/1200x300') no-repeat center center;
+            background-size: cover;
+            height: 300px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .hero h1 {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
         }
         footer {
             text-align: center;
             padding: 10px;
-            background-color: #4CAF50;
+            background-color: #333;
             color: white;
             position: fixed;
             bottom: 0;
@@ -68,22 +87,24 @@
             margin-top: 20px;
         }
     </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            document.body.classList.add('fade-in');
-        });
-    </script>
 </head>
 <body>
     <header>
-        <h1>Bienvenue sur ma page personnelle</h1>
+        <h1>FunCraft</h1>
     </header>
     <nav>
-        <a href="#about">À propos de moi</a>
-        <a href="#hobbies">Centres d'intérêt</a>
-        <a href="#projects">Projets</a>
-        <a href="nanorr.html">Nanorr</a>
+        <a href="#">Accueil</a>
+        <a href="#hobbies">Jeux</a>
+        <a href="#projects">Joueurs</a>
+        <a href="#">Forum</a>
+        <a href="#">Classement</a>
+        <a href="#">Boutique</a>
+        <a href="#">À propos</a>
+        <a href="#">Mon compte</a>
     </nav>
+    <div class="hero">
+        <h1>Bienvenue sur ma page personnelle</h1>
+    </div>
     <main>
         <section id="about">
             <h2>À propos de moi</h2>
@@ -101,6 +122,10 @@
                 <li>Une création artistique en dessin</li>
                 <li>Participation à un tournoi de jeux vidéo</li>
             </ul>
+        </section>
+        <section id="nanorr">
+            <h2><a href="nanorr.html">Nanorr</a></h2>
+            <p>Découvrez l'histoire de Nanorr, le pire joueur de jeux vidéo de tous les temps.</p>
         </section>
         <div class="joke">
             <p>Pourquoi Nanorr n'utilise-t-il jamais de lunettes en jouant aux jeux vidéo ? Parce qu'il ne voit jamais l'écran de victoire ! 😆</p>
