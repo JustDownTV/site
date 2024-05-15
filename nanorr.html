@@ -11,6 +11,11 @@
             padding: 0;
             background-color: #ff4d4d; /* Couleur de fond rouge */
             color: white;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        body.fade-in {
+            opacity: 1;
         }
         header {
             background-color: #4CAF50;
@@ -63,6 +68,11 @@
             margin-top: 20px;
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('fade-in');
+        });
+    </script>
 </head>
 <body>
     <header>
